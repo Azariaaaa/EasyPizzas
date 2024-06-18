@@ -1,0 +1,1 @@
+enum Categorie { rossa, bianca, veggie }
