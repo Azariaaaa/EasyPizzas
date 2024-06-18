@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:pizza/Models/pizza.dart';
 
 class CartDetails extends StatelessWidget {
@@ -55,19 +56,19 @@ class CartDetails extends StatelessWidget {
               );
             },
           ),
-          backToHomeButton(),
+          backToHomeButton(context),
         ],
       ) 
     );
   }
-  Widget backToHomeButton(){
+  Widget backToHomeButton(BuildContext context){
     return ElevatedButton(
       onPressed: () {
-        print("backHome");
+        context.go('/');
       },
       style: ElevatedButton.styleFrom(
         backgroundColor: const Color.fromARGB(255, 182, 67, 17),
-        minimumSize: const Size(120, 50),
+        fixedSize: const Size(120, 50),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(4.0),
         ),
@@ -82,7 +83,7 @@ class CartDetails extends StatelessWidget {
           Row(
             children: [
               Text(
-                "Retour.",
+                "Retour",
                 style: TextStyle(
                   color: Color.fromARGB(255, 232, 230, 230),
                 ),
