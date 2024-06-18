@@ -82,7 +82,7 @@ class CartDetails extends StatelessWidget {
           Row(
             children: [
               Text(
-                "Retour",
+                "Retour.",
                 style: TextStyle(
                   color: Color.fromARGB(255, 232, 230, 230),
                 ),
